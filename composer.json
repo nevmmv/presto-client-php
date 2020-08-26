@@ -1,5 +1,5 @@
 {
-    "name": "clouding/presto-client-php",
+    "name": "nevmmv/presto-client-php",
     "description": "Presto client library for PHP.",
     "keywords": ["presto", "http", "library"],
     "type": "library",
@@ -13,7 +13,7 @@
     "require": {
         "php": ">=7.2",
         "ext-json": "*",
-        "guzzlehttp/guzzle": "~6.3"
+        "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
         "blastcloud/guzzler": "^1.0",
