@@ -98,6 +98,7 @@ class Processor
             'X-Presto-User' => $this->connection->getUser(),
             'X-Presto-Schema' => $this->connection->getSchema(),
             'X-Presto-Catalog' => $this->connection->getCatalog(),
+            'X-Presto-Source' => $this->connection->getSource(),
         ];
 
         $response = $this->client->post($baseUri, ['headers' => $headers, 'body' => $query]);

@@ -30,6 +30,13 @@ class Connection
     const DEFAULT_CATALOG = 'default';
 
     /**
+     * Default source.
+     *
+     * @var string
+     */
+    const DEFAULT_SOURCE = 'php';
+
+    /**
      * The user of connection.
      *
      * @var string
@@ -58,6 +65,13 @@ class Connection
     protected $catalog;
 
     /**
+     * The source of connection.
+     *
+     * @var string
+     */
+    protected $source;
+
+    /**
      * Create a new connection instance.
      *
      * @param array $config
@@ -78,6 +92,7 @@ class Connection
         $this->host = $config['host'] ?? static::DEFAULT_HOST;
         $this->schema = $config['schema'] ?? '';
         $this->catalog = $config['catalog'] ?? static::DEFAULT_CATALOG;
+        $this->source = $config['source'] ?? static::DEFAULT_SOURCE;
     }
 
     /**
@@ -118,5 +133,15 @@ class Connection
     public function getCatalog(): string
     {
         return $this->catalog;
+    }
+
+    /**
+     * Get connection source.
+     *
+     * @return string
+     */
+    public function getSource(): string
+    {
+        return $this->source;
     }
 }

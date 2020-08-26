@@ -18,7 +18,7 @@ A [Presto](https://prestodb.io) client for the [PHP](http://www.php.net/) progra
 ## Installation
 
 ```
-composer require clouding/presto-client-php
+composer require nevmmv/presto-client-php
 ```
 
 ## Quick Start
@@ -35,6 +35,7 @@ $presto->addConnection([
     'host' => 'localhost:8080',
     'catalog' => 'default',
     'schema' => 'presto',
+    'source' => 'php',
 ]);
 
 // Set manager as global (optional)
